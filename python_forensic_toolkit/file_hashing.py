@@ -42,7 +42,7 @@ def read_binary_file (file_path):
   
   :param file_path: this is the path to the file to be read.
   :type file_path: str.
-  returns: str -- the content of the file to be read
+  :returns: str -- the content of the file to be read
   """
   try:
     file_object = open(file_path,'rb')
