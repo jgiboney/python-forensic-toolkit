@@ -5,7 +5,7 @@
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
-BUILDDIR      = build
+BUILDDIR      = ./
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -50,7 +50,7 @@ clean:
 
 .PHONY: html
 html:
-	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
@@ -91,9 +91,9 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/PythonForensicToolkit.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/PythonForensicsToolkit.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/PythonForensicToolkit.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/PythonForensicsToolkit.qhc"
 
 .PHONY: applehelp
 applehelp:
@@ -110,8 +110,8 @@ devhelp:
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/PythonForensicToolkit"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/PythonForensicToolkit"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/PythonForensicsToolkit"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/PythonForensicsToolkit"
 	@echo "# devhelp"
 
 .PHONY: epub

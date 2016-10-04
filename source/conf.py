@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Python Forensic Toolkit documentation build configuration file, created by
-# sphinx-quickstart on Fri Sep 16 16:04:57 2016.
+# Python Forensics Toolkit documentation build configuration file, created by
+# sphinx-quickstart on Mon Oct  3 21:25:37 2016.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -17,9 +17,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
-import sys
-sys.path.insert(0, os.path.abspath('../python-forensic-toolkit'))
+# import os
+# import sys
+# sys.path.insert(0, os.path.abspath('.'))
 
 # -- General configuration ------------------------------------------------
 
@@ -31,9 +31,6 @@ sys.path.insert(0, os.path.abspath('../python-forensic-toolkit'))
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.doctest',
-    'sphinx.ext.coverage',
     'sphinx.ext.githubpages',
 ]
 
@@ -54,9 +51,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Python Forensic Toolkit'
-copyright = '2016, Justin Scott Giboney'
-author = 'Justin Scott Giboney'
+project = 'Python Forensics Toolkit'
+copyright = '2016, Justin Scott Giboney and many others'
+author = 'Justin Scott Giboney and many others'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -139,7 +136,7 @@ html_theme = 'alabaster'
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
 #
-# html_title = 'Python Forensic Toolkit v1'
+# html_title = 'Python Forensics Toolkit v1'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
@@ -239,7 +236,7 @@ html_static_path = ['_static']
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'PythonForensicToolkitdoc'
+htmlhelp_basename = 'PythonForensicsToolkitdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -265,8 +262,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'PythonForensicToolkit.tex', 'Python Forensic Toolkit Documentation',
-     'Justin Scott Giboney', 'manual'),
+    (master_doc, 'PythonForensicsToolkit.tex', 'Python Forensics Toolkit Documentation',
+     'Justin Scott Giboney and many others', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -307,7 +304,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'pythonforensictoolkit', 'Python Forensic Toolkit Documentation',
+    (master_doc, 'pythonforensicstoolkit', 'Python Forensics Toolkit Documentation',
      [author], 1)
 ]
 
@@ -322,8 +319,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'PythonForensicToolkit', 'Python Forensic Toolkit Documentation',
-     author, 'PythonForensicToolkit', 'One line description of project.',
+    (master_doc, 'PythonForensicsToolkit', 'Python Forensics Toolkit Documentation',
+     author, 'PythonForensicsToolkit', 'One line description of project.',
      'Miscellaneous'),
 ]
 
