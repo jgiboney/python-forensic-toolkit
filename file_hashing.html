@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>File Hashing &#8212; Python Forensic Toolkit 1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Python Forensic Toolkit 1 documentation" href="index.html" />
+    <link rel="next" title="Malware" href="malware.html" />
+    <link rel="prev" title="Welcome to Python Forensic Toolkit’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-file_hashing">
+<span id="file-hashing"></span><h1>File Hashing<a class="headerlink" href="#module-file_hashing" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="file_hashing.convert_string_to_binary">
+<code class="descclassname">file_hashing.</code><code class="descname">convert_string_to_binary</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#file_hashing.convert_string_to_binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function attempts to convert a string to binary.</p>
+<p>Acknowledgments:
+Thanks to Minnie Kumar for finding an error in the
+get_hash_of_string function and providing a solution.</p>
+<p>Code based an answer from Elizafox on Stack Overflow:
+<a class="reference external" href="http://stackoverflow.com/questions/34869889/what-is-the-proper-way-to-determine-if-an-object-is-a-bytes-like-object-in-pytho">http://stackoverflow.com/questions/34869889/what-is-the-proper-way-to-determine-if-an-object-is-a-bytes-like-object-in-pytho</a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="file_hashing.do_files_have_same_content">
+<code class="descclassname">file_hashing.</code><code class="descname">do_files_have_same_content</code><span class="sig-paren">(</span><em>file_1</em>, <em>file_2</em>, <em>algorithm='MD5'</em><span class="sig-paren">)</span><a class="headerlink" href="#file_hashing.do_files_have_same_content" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function checks the hashes of the contents of two files. It returns
+a boolean.</p>
+<p>Acknowledgments:
+Thanks to Ryan Dorrien and Kyle O&#8217;Neill for working on this function.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="file_hashing.get_hash_of_binary_file_contents">
+<code class="descclassname">file_hashing.</code><code class="descname">get_hash_of_binary_file_contents</code><span class="sig-paren">(</span><em>file_path</em>, <em>algorithm='MD5'</em><span class="sig-paren">)</span><a class="headerlink" href="#file_hashing.get_hash_of_binary_file_contents" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function will read and hash the contents of a file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>file_path</strong> (<em>str.</em>) &#8211; The path to the file to be hashed.</li>
+<li><strong>algorithm</strong> (<em>str.</em>) &#8211; The hashing algorithm to be used. Defaults to &#8216;MD5&#8217;.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">str &#8211; The hash of the contents of the file.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="file_hashing.get_hash_of_string">
+<code class="descclassname">file_hashing.</code><code class="descname">get_hash_of_string</code><span class="sig-paren">(</span><em>string</em>, <em>algorithm='MD5'</em><span class="sig-paren">)</span><a class="headerlink" href="#file_hashing.get_hash_of_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function takes a string and hashes it using an algorithm.</p>
+<p>Acknowledgments:
+Addition of multiple hashing algorithms courtesy of Anthony Capece, Elvis Gadtaula,
+Nick Parenti, Jordan Polun, and Christopher Tafel.
+Dictionary and associated functionality is courtesy of Jordan Polun.
+Documentation is courtesy of Jazlin Perez and Jordan Polun.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>string</strong> (<em>str.</em>) &#8211; this is the string that will be hashed.</li>
+<li><strong>algorithm</strong> (<em>str.</em>) &#8211; The hashing algorithm to be used. Defaults to &#8216;MD5&#8217;.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">str &#8211; The hash of the string.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="file_hashing.get_hashes_of_files_in_directory">
+<code class="descclassname">file_hashing.</code><code class="descname">get_hashes_of_files_in_directory</code><span class="sig-paren">(</span><em>directory</em>, <em>algorithm='MD5'</em><span class="sig-paren">)</span><a class="headerlink" href="#file_hashing.get_hashes_of_files_in_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function will get the hashes of all files in a directory.</p>
+<p>Acknowledgments:
+This function is courtesy of Minnie Kumar, Kyle O&#8217;Neill, Lawrence Rosenstadt,
+and Tiffany Xu.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="file_hashing.read_binary_file">
+<code class="descclassname">file_hashing.</code><code class="descname">read_binary_file</code><span class="sig-paren">(</span><em>file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#file_hashing.read_binary_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function will read and hash the contents of a file.</p>
+<p>Acknowledgments:
+Documentation is courtesy of Jazlin Perez and Jordan Polun.
+Thanks to Joseph Darocha for fixing the return error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_path</strong> (<em>str.</em>) &#8211; this is the path to the file to be read.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">str &#8211; the content of the file to be read</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Python Forensic Toolkit&#8217;s documentation!</a></li>
+      <li>Next: <a href="malware.html" title="next chapter">Malware</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/file_hashing.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Justin Scott Giboney and many more.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/file_hashing.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

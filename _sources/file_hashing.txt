@@ -1,0 +1,5 @@
+File Hashing
+============
+
+.. automodule:: file_hashing
+   :members:

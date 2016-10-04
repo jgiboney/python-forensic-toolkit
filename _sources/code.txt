@@ -1,0 +1,8 @@
+Auto Generated Documentation
+============================
+
+.. automodule:: file_hashing
+   :members:
+
+.. automodule:: malware
+   :members:
